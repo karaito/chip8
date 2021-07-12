@@ -2,6 +2,7 @@
 
 #include <array>
 #include <cstdint>
+#include <string>
 
 
 class Cpu{
@@ -21,6 +22,7 @@ class Cpu{
         void setPC(uint16_t value);
         uint16_t readPC();
 
+        void loadROM(std::string filename);
 
     private:
         std::array <uint8_t, 0x1000> ram;
